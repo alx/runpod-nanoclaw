@@ -1,5 +1,7 @@
 # Nanoclaw on RunPod Hub
 
+[![Runpod](https://api.runpod.io/badge/alx/runpod-nanoclaw)](https://console.runpod.io/hub/alx/runpod-nanoclaw)
+
 Autonomous personal AI assistant powered by [Claude](https://anthropic.com/claude). Nanoclaw runs in isolated Docker containers per conversation group, supports WhatsApp and Telegram, and exposes an HTTP/REST API — all configurable via environment variables, no source modifications required.
 
 ---
