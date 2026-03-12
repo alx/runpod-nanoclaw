@@ -1,0 +1,68 @@
+{
+  "title": "Nanoclaw AI Assistant",
+  "description": "Autonomous personal AI assistant powered by Claude. Supports WhatsApp, Telegram, and HTTP API. Runs in isolated containers with persistent memory.",
+  "type": "pod",
+  "category": "language",
+  "runsOn": "CPU",
+  "containerDiskInGb": 20,
+  "env": [
+    {
+      "key": "ANTHROPIC_API_KEY",
+      "input": {
+        "name": "Anthropic API Key",
+        "description": "Your Anthropic API key for Claude access",
+        "type": "string",
+        "required": true
+      }
+    },
+    {
+      "key": "ASSISTANT_NAME",
+      "input": {
+        "name": "Assistant Name",
+        "description": "Trigger word to address the assistant (e.g. 'Andy')",
+        "type": "string",
+        "default": "Andy"
+      }
+    },
+    {
+      "key": "TELEGRAM_BOT_TOKEN",
+      "input": {
+        "name": "Telegram Bot Token",
+        "description": "Token from @BotFather for Telegram channel support. Leave empty to disable.",
+        "type": "string",
+        "required": false,
+        "advanced": true
+      }
+    },
+    {
+      "key": "TZ",
+      "input": {
+        "name": "Timezone",
+        "description": "Timezone for scheduled tasks (e.g. Europe/Berlin)",
+        "type": "string",
+        "default": "UTC",
+        "advanced": true
+      }
+    },
+    {
+      "key": "CONTAINER_TIMEOUT",
+      "input": {
+        "name": "Agent Timeout (ms)",
+        "description": "Max runtime for agent sub-containers in milliseconds",
+        "type": "number",
+        "default": 1800000,
+        "advanced": true
+      }
+    },
+    {
+      "key": "CONTAINER_IMAGE",
+      "input": {
+        "name": "Agent Container Image",
+        "description": "Docker image used for spawning agent sub-containers",
+        "type": "string",
+        "default": "ghcr.io/qwibitai/nanoclaw-agent:latest",
+        "advanced": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "HTTP API health check",
+      "input": { "path": "/health" },
+      "timeout": 60000
+    }
+  ],
+  "configuration": {
+    "runsOn": "CPU",
+    "environment": {
+      "ANTHROPIC_API_KEY": "test-key",
+      "ASSISTANT_NAME": "TestBot"
+    }
+  }
+}
